@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Girigirii.id | Inari Sushi Specialty Tangerang</title>
+    <meta name="description" content="Girigirii.id - Inari Sushi Specialty in Tangerang. Available on GoFood, GrabFood, & ShopeeFood. Accepting Bulk Orders & Self Pick-up.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Yusei+Magic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="lang-en">
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="logo.png" alt="Girigirii Logo" class="brand-logo-img">
+                Girigirii.id
+            </a>
+            <ul class="nav-links">
+                <li><a href="#about"><span data-lang="en">About Us</span><span data-lang="id">Tentang</span></a></li>
+                <li><a href="#menu"><span data-lang="en">Menu</span><span data-lang="id">Menu</span></a></li>
+                <li><a href="#customization"><span data-lang="en">Custom Orders</span><span data-lang="id">Pesanan Khusus</span></a></li>
+                <li><a href="#bulk-order" class="highlight-link"><span data-lang="en">Bulk Order</span><span data-lang="id">Bulk Order</span></a></li>
+            </ul>
+            <div class="lang-toggle" style="margin-left: 20px; display: flex; gap: 8px; font-weight: bold; cursor: pointer; color: var(--text-main);">
+                <span id="lang-id" class="lang-btn" onclick="setLang('id')">ID</span>
+                <span>|</span>
+                <span id="lang-en" class="lang-btn active" onclick="setLang('en')">EN</span>
+            </div>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="hero-content container">
+            <h1 class="fade-in-up">Inari Sushi Specialty</h1>
+            <p class="fade-in-up delay-1"><span data-lang="en">The sweetness of tofu skin combined with savory sushi rice and premium toppings. Ready to accompany your day in Tangerang!</span><span data-lang="id">Manisnya kulit tahu berpadu dengan nasi sushi asam gurih dan topping premium. Siap menemani harimu di Tangerang!</span></p>
+            
+            <div class="hero-buttons fade-in-up delay-2">
+                <a href="https://gofood.link/a/SfwJmbq" target="_blank" class="btn btn-gofood"><i class="fas fa-motorcycle"></i> GoFood</a>
+                <a href="https://r.grab.com/g/6-20260428_003541_772dc6d3ba2c406dbbb6eebd0e14dc48_MEXMPS-6-C7WTR4BGN7UHCX" target="_blank" class="btn btn-grab"><i class="fas fa-motorcycle"></i> GrabFood</a>
+                <a href="#" target="_blank" class="btn btn-shopee"><i class="fas fa-shopping-bag"></i> ShopeeFood</a>
+                <a href="#bulk-order" class="btn btn-wa"><i class="fab fa-whatsapp"></i> <span data-lang="en">Order & Inquiries</span><span data-lang="id">Order & Tanya-tanya</span></a>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <video class="about-gif-logo" autoplay loop muted playsinline>
+                    <source src="logou.webm" type="video/webm">
+                </video>
+                <span class="subtitle"><span data-lang="en">Why Girigirii?</span><span data-lang="id">Kenapa Girigirii?</span></span>
+                <h2><span data-lang="en">Authentic Inari Servings</span><span data-lang="id">Sajian Autentik Inari</span></h2>
+                <div class="line-accent"></div>
+            </div>
+            <div class="about-content">
+                <p><span data-lang="en">We specialize in <strong>Inari Sushi</strong>, where fluffy sushi rice is wrapped in slowly simmered tofu skin (aburaage) that absorbs sweet and savory flavors. Topped with a generous selection of premium toppings.</span><span data-lang="id">Kami berspesialisasi pada <strong>Inari Sushi</strong>, di mana nasi sushi lembut dibungkus dengan kulit tahu (aburaage) yang dimasak perlahan hingga meresap rasa manis dan gurih. Ditambah dengan berbagai pilihan <em>topping</em> premium yang melimpah.</span></p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <i class="fas fa-fish"></i>
+                    <h3>Premium Topping</h3>
+                    <p><span data-lang="en">From mentai, kani, to selected chuka wakame.</span><span data-lang="id">Mulai dari mentai, kani, hingga chuka wakame pilihan.</span></p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Freshly Made</h3>
+                    <p><span data-lang="en">Freshly made every day based on orders.</span><span data-lang="id">Dibuat segar setiap hari berdasarkan pesanan.</span></p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-box-open"></i>
+                    <h3>Bulk Order Ready</h3>
+                    <p><span data-lang="en">Perfect for office events, birthdays, or family gatherings.</span><span data-lang="id">Cocok untuk acara kantor, ulang tahun, atau kumpul keluarga.</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="subtitle"><span data-lang="en">Favorite Picks</span><span data-lang="id">Pilihan Favorit</span></span>
+                <h2><span data-lang="en">Our Inari Variants</span><span data-lang="id">Varian Inari Kami</span></h2>
+                <div class="line-accent"></div>
+            </div>
+
+            <!-- Visual Guides: Menu & Panduan side by side -->
+            <div class="menu-guides-row fade-in-up">
+                <div class="menu-guide-banner menu-guide-top">
+                    <img src="Menu & Paket A4 Giri.webp" alt="Menu dan Paket Girigirii" class="menu-guide-img">
+                </div>
+                <div class="menu-guide-banner menu-guide-bottom">
+                    <img src="panduan-sushi.webp" alt="Panduan Bentuk Varian Sushi" class="menu-guide-img">
+                </div>
+            </div>
+
+            <!-- RICEBOWLS -->
+            <h3 class="category-title">Japanese Ricebowls</h3>
+            <div class="menu-grid">
+                <article class="menu-card fade-in-up">
+                    <img src="bundle japanese ricebowl.webp" alt="Bundle Japanese Ricebowl" class="menu-item-img">
+                    <div class="card-details">
+                        <h3>Bundle Japanese Ricebowls</h3>
+                        <p><span data-lang="en">2 Japanese Ricebowls (Beef Teriyaki Ricebowl and Chicken Nanban Ricebowl).</span><span data-lang="id">2 Japanese Ricebowl (Beef Teriyaki Ricebowl dan Chicken Nanban Ricebowl).</span></p>
+                        <span class="price"><span data-lang="en">Start from 80K</span><span data-lang="id">Mulai 80K</span></span>
+                    </div>
+                </article>
+                <article class="menu-card fade-in-up delay-1">
+                    <img src="beef teriyaki ricebowl.webp" alt="Beef Teriyaki Ricebowl" class="menu-item-img">
+                    <div class="card-details">
+                        <h3>Beef Teriyaki Ricebowl</h3>
+                        <p><span data-lang="en">A blend of fluffy Japanese rice served with sliced beef sautéed in sweet and savory Japanese teriyaki sauce. Garnished with sesame seeds and green onions.</span><span data-lang="id">Perpaduan nasi Jepang pulen disajikan dengan irisan daging sapi yang ditumis dengan saus teriyaki khas jepang yang manis dan gurih. Diberi taburan wijen dan daun bawang.</span></p>
+                        <span class="price"><span data-lang="en">Start from 46K</span><span data-lang="id">Mulai 46K</span></span>
+                    </div>
+                </article>
+                <article class="menu-card fade-in-up delay-2">
+                    <img src="chicken nanban ricebowl.webp" alt="Chicken Nanban Ricebowl" class="menu-item-img">
+                    <div class="card-details">
+                        <h3>Chicken Nanban Ricebowl</h3>
+                        <p><span data-lang="en">A combination of fluffy Japanese rice served with crispy and juicy chicken karaage. Coated in sweet and sour nanban sauce, topped with Japanese tartar sauce and garnished with sliced green onions.</span><span data-lang="id">Perpaduan nasi Jepang pulen disajikan dengan potongan ayam karage yang renyah dan juicy. Dibalur dengan saus nanban yang asam manis segar, lalu disiram saus tartar khas Jepang dan ditaburi irisan daun bawang.</span></p>
+                        <span class="price"><span data-lang="en">Start from 42K</span><span data-lang="id">Mulai 42K</span></span>
+                    </div>
+                </article>
+            </div>
+
+            <!-- INARI SETS -->
+            <h3 class="category-title">Inari Sushi Sets</h3>
+            <div class="menu-grid">
+                <article class="menu-card fade-in-up highlight-card">
+                    <img src="4pcs inari.webp" alt="4 Pcs Inari Sushi Set" class="menu-item-img">
+                    <div class="card-details">
+                        <h3>4 Pcs Inari Sushi Set</h3>
+                        <p><span data-lang="en">4 pcs of inari sushi (choice of ebi mayo / beef teriyaki / tuna mayo / egg mentai / kani mentai).</span><span data-lang="id">4 pcs inari sushi (pilihan: ebi tempura / beef teriyaki / tuna mayo / egg mentai / kani mentai).</span></p>
+                        <span class="price"><span data-lang="en">Start from 79K</span><span data-lang="id">Mulai 79K</span></span>
+                    </div>
+                </article>
+                <article class="menu-card fade-in-up delay-1">
+                    <img src="2pcs inari.webp" alt="Paket Hemat (2 pcs inari)" class="menu-item-img">
+                    <div class="card-details">
+                        <h3>Paket Hemat (2 Pcs)</h3>
+                        <p><span data-lang="en">2 pcs of inari sushi (choice of ebi mayo / beef teriyaki / tuna mayo / egg mentai / kani mentai).</span><span data-lang="id">2 pcs inari sushi (pilihan: ebi tempura / beef teriyaki / tuna mayo / egg mentai / kani mentai).</span></p>
+                        <span class="price"><span data-lang="en">Start from 37K</span><span data-lang="id">Mulai 37K</span></span>
+                    </div>
+                </article>
+            </div>
+
+            <!-- INARI A LA CARTE -->
+            <h3 class="category-title">Inari Sushi (A La Carte)</h3>
+            <div class="menu-grid">
+                <article class="menu-card fade-in-up">
+                    <img src="inari sushi ebi mayo.webp" alt="Inari Sushi Ebi Tempura" class="menu-item-img">
+                    <div class="card-details">
+                        <h3>Ebi Tempura Inari</h3>
+                        <p><span data-lang="en">Japanese fluffy rice covered with Japanese tofu skin (inari) that is sweet and savory, topped with ebi furai (fried shrimp) and wrapped in a creamy savory mayonnaise sauce. Then torched to give it a smoky aroma.</span><span data-lang="id">Nasi Jepang pulen berbalut kulit tahu (inari) yang manis dan gurih, diberi topping ebi furai (udang goreng) berbalut saus mayo gurih yang creamy. Kemudian dibakar untuk memberikan aroma smoky.</span></p>
+                        <span class="price"><span data-lang="en">Start from 17K</span><span data-lang="id">Mulai 17K</span></span>
+                    </div>
+                </article>
+                <article class="menu-card fade-in-up delay-1">
+                    <img src="inari sushi beef teriyaki.webp" alt="Beef Teriyaki Inari" class="menu-item-img">
+                    <div class="card-details">
+                        <h3>Beef Teriyaki Inari</h3>
+                        <p><span data-lang="en">Japanese fluffy rice covered with Japanese tofu skin (inari) that is sweet and savory, topped with sliced premium beef cooked in Japanese teriyaki sauce. Sprinkled with sesame seeds then torched to give an aromatic and smoky flavour.</span><span data-lang="id">Nasi Jepang pulen berbalut kulit tahu (inari) yang manis dan gurih, diberi topping irisan daging sapi premium yang dimasak dengan saus teriyaki Jepang. Ditaburi biji wijen lalu dibakar untuk rasa aromatik dan smoky.</span></p>
+                        <span class="price"><span data-lang="en">Start from 17K</span><span data-lang="id">Mulai 17K</span></span>
+                    </div>
+                </article>
+                <article class="menu-card fade-in-up delay-2">
+                    <img src="inari sushi tuna mayo.webp" alt="Tuna Mayo Inari" class="menu-item-img">
+                    <div class="card-details">
+                        <h3>Tuna Mayo Inari</h3>
+                        <p><span data-lang="en">Japanese fluffy rice covered with Japanese tofu skin (inari) that is sweet and savory, topped with a mixture of tuna and sweet corn mixed with creamy mayonnaise sauce, then torched to give a smoky aroma.</span><span data-lang="id">Nasi Jepang pulen berbalut kulit tahu (inari) yang manis dan gurih, diberi topping campuran tuna dan jagung manis berbalut saus mayo creamy, lalu dibakar untuk memberikan aroma smoky.</span></p>
+                        <span class="price"><span data-lang="en">Start from 16K</span><span data-lang="id">Mulai 16K</span></span>
+                    </div>
+                </article>
+                <article class="menu-card fade-in-up">
+                    <img src="inari sushi egg mentai.webp" alt="Egg Mentai Inari" class="menu-item-img">
+                    <div class="card-details">
+                        <h3>Egg Mentai Inari</h3>
+                        <p><span data-lang="en">Japanese fluffy rice covered with Japanese tofu skin (inari) that is sweet and savory, topped with pieces of egg mixed with Japanese mentai sauce. Then torched to give an aromatic and smoky flavor.</span><span data-lang="id">Nasi Jepang pulen berbalut kulit tahu (inari) yang manis dan gurih, diberi topping potongan telur yang dicampur dengan saus mentai khas Jepang. Kemudian dibakar untuk memberikan rasa aromatik dan smoky.</span></p>
+                        <span class="price"><span data-lang="en">Start from 15K</span><span data-lang="id">Mulai 15K</span></span>
+                    </div>
+                </article>
+                <article class="menu-card fade-in-up delay-1">
+                    <img src="inari sushi kani mentai.webp" alt="Kani Mentai Inari" class="menu-item-img">
+                    <div class="card-details">
+                        <h3>Kani Mentai Inari</h3>
+                        <p><span data-lang="en">Japanese fluffy rice covered with Japanese tofu skin (inari) that is sweet and savory, topped with soft shredded crab sticks (kani) and mixed with fresh green onion slices, combined with Japanese signature mentai sauce, then torched.</span><span data-lang="id">Nasi Jepang pulen berbalut kulit tahu (inari) yang manis dan gurih, diberi topping suwiran crab stick (kani) lembut yang dicampur dengan irisan daun bawang segar, berpadu dengan saus mentai khas Jepang, lalu dibakar.</span></p>
+                        <span class="price"><span data-lang="en">Start from 15K</span><span data-lang="id">Mulai 15K</span></span>
+                    </div>
+                </article>
+            </div>
+
+            <!-- DRINKS -->
+            <h3 class="category-title">Refreshing Drinks</h3>
+            <div class="menu-grid drinks-grid">
+                <article class="menu-card fade-in-up">
+                    <img src="lychee.webp" alt="Blue Summer (Lychee)" class="menu-item-img">
+                    <div class="card-details">
+                        <h3>Blue Summer (Lychee)</h3>
+                        <p><span data-lang="en">Refreshing and sweet lychee-flavored sparkling drink with a hint of lemon juice.</span><span data-lang="id">Minuman bersoda dengan rasa lychee yang segar dan manis dengan sari lemon.</span></p>
+                        <span class="price"><span data-lang="en">Start from 15K</span><span data-lang="id">Mulai 15K</span></span>
+                    </div>
+                </article>
+                <article class="menu-card fade-in-up delay-1">
+                    <img src="strawberry.webp" alt="Sunset Berry (Strawberry)" class="menu-item-img">
+                    <div class="card-details">
+                        <h3>Sunset Berry (Strawberry)</h3>
+                        <p><span data-lang="en">Refreshing and sweet strawberry-flavored sparkling drink with a hint of lemon juice.</span><span data-lang="id">Minuman bersoda dengan rasa strawberry yang segar dan manis dengan sari lemon.</span></p>
+                        <span class="price"><span data-lang="en">Start from 15K</span><span data-lang="id">Mulai 15K</span></span>
+                    </div>
+                </article>
+            </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="customization" class="custom-section">
+        <div class="container">
+            <div class="custom-wrapper">
+                <div class="section-header left-align">
+                    <h2><span data-lang="en">Choose Your Condiments</span><span data-lang="id">Pilih Condiment-mu</span></h2>
+                    <p><span data-lang="en">Customize the complementary additions for your sushi.</span><span data-lang="id">Sesuaikan tambahan pelengkap sushimu.</span></p>
+                </div>
+
+                <form class="custom-form" id="sushiForm">
+                    <div class="form-group">
+                        <h4><span data-lang="en">Extra Condiments</span><span data-lang="id">Extra Pelengkap</span></h4>
+                        <div class="checkbox-group">
+                            <label class="custom-checkbox">
+                                <input type="checkbox" name="condiment" value="Wasabi">
+                                <span class="checkmark"></span> Extra Wasabi
+                            </label>
+                            <label class="custom-checkbox">
+                                <input type="checkbox" name="condiment" value="Soy Sauce">
+                                <span class="checkmark"></span> <span data-lang="en">Extra Shoyu (Soy Sauce)</span><span data-lang="id">Extra Shoyu (Kecap Asin)</span>
+                            </label>
+                            <label class="custom-checkbox">
+                                <input type="checkbox" name="condiment" value="Gari">
+                                <span class="checkmark"></span> Pickled Ginger (Gari)
+                            </label>
+                            <label class="custom-checkbox">
+                                <input type="checkbox" name="condiment" value="Chili Powder">
+                                <span class="checkmark"></span> <span data-lang="en">Togarashi (Chili Powder)</span><span data-lang="id">Togarashi (Bubuk Cabe)</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <h4><span data-lang="en">Cutlery</span><span data-lang="id">Perlengkapan Makan</span></h4>
+                        <div class="radio-group">
+                            <label class="custom-radio">
+                                <input type="radio" name="alat" value="Include Chopsticks" checked>
+                                <span class="radio-mark"></span> <span data-lang="en">Include Chopsticks</span><span data-lang="id">Pakai Sumpit</span>
+                            </label>
+                            <label class="custom-radio">
+                                <input type="radio" name="alat" value="No Chopsticks (Go Green)">
+                                <span class="radio-mark"></span> <span data-lang="en">No Chopsticks (Go Green)</span><span data-lang="id">Tanpa Sumpit (Go Green)</span>
+                            </label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="reels" class="reels-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="subtitle"><span data-lang="en">Follow Us</span><span data-lang="id">Ikuti Kami</span></span>
+                <h2><span data-lang="en">Instagram Reels Gallery</span><span data-lang="id">Galeri Reels Instagram</span></h2>
+                <div class="line-accent"></div>
+                <p class="swipe-hint"><i class="fas fa-arrows-alt-h"></i> <span data-lang="en">Swipe to see more</span><span data-lang="id">Geser untuk melihat lainnya</span></p>
+            </div>
+            
+            <div class="reels-wrapper">
+                <button class="reel-scroll-btn left-btn" onclick="document.getElementById('reelsContainer').scrollBy({left: -340, behavior: 'smooth'})" aria-label="Scroll Left"><i class="fas fa-chevron-left"></i></button>
+                <div class="reels-container" id="reelsContainer">
+                <iframe src="https://www.instagram.com/reel/DTu6TlAkkd3/embed" class="reel-iframe" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                <iframe src="https://www.instagram.com/reel/DScmN4bkmmN/embed" class="reel-iframe" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                <iframe src="https://www.instagram.com/reel/DPYb_l2CETF/embed" class="reel-iframe" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                <iframe src="https://www.instagram.com/reel/DO5s2_6krZG/embed" class="reel-iframe" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                <iframe src="https://www.instagram.com/reel/DOv0mWvEp8K/embed" class="reel-iframe" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                <iframe src="https://www.instagram.com/reel/DOqko09ksSB/embed" class="reel-iframe" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                <iframe src="https://www.instagram.com/reel/DOnFTtPEmqe/embed" class="reel-iframe" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                <iframe src="https://www.instagram.com/reel/DKr10XyyKpG/embed" class="reel-iframe" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                </div>
+                <button class="reel-scroll-btn right-btn" onclick="document.getElementById('reelsContainer').scrollBy({left: 340, behavior: 'smooth'})" aria-label="Scroll Right"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="bulk-order" class="bulk-section">
+        <div class="container bulk-content">
+            <span class="bulk-badge">TANGERANG AREA</span>
+            <h2><span data-lang="en">Accepting Bulk Orders & Self Pick-up 🍱</span><span data-lang="id">Accept Bulk Order & Self Pick-up 🍱</span></h2>
+            <p><span data-lang="en">Need delicious and beautiful servings for campus events, office gatherings, or family meetups? <br>Girigirii is ready to provide Inari Sushi Party Platters for you!</span><span data-lang="id">Butuh sajian lezat dan cantik untuk acara kampus, kantor, atau kumpul keluarga? <br>Girigirii siap menyediakan Inari Sushi Party Platter untukmu!</span></p>
+            <div style="display:flex; flex-direction:column; align-items:center; gap:15px; margin-top:20px;">
+                <a href="https://wa.me/6281210055993" target="_blank" class="btn btn-wa-lg" id="waButton">
+                    <i class="fab fa-whatsapp"></i> <span data-lang="en">WhatsApp Us (Bulk Order)</span><span data-lang="id">Chat WA (Bulk Order)</span>
+                </a>
+                <a href="https://wa.me/6289636657249" target="_blank" class="btn btn-wa" style="font-size:1.1rem; padding:12px 30px;">
+                    <i class="fab fa-whatsapp"></i> <span data-lang="en">WhatsApp Us (CS / Event / Bazaar)</span><span data-lang="id">Chat WA (CS / Event / Bazar)</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer id="lokasi">
+        <div class="container footer-content">
+            <div class="footer-col brand-col">
+                <div class="footer-logo-wrapper">
+                    <img src="logo.png" alt="Girigirii Logo" class="footer-logo-img">
+                    <h3>Girigirii<span>.id</span></h3>
+                </div>
+                <p>Inari Sushi Specialty</p>
+                <div class="social-links">
+                    <a href="https://instagram.com/girigirii.id" target="_blank"><i class="fab fa-instagram"></i> @girigirii.id</a>
+                    <a href="https://www.tiktok.com/@girigirii.id" target="_blank"><i class="fab fa-tiktok"></i> @girigirii.id</a>
+                </div>
+            </div>
+
+            <div class="footer-col contact-col">
+                <h4><span data-lang="en">Contact Us</span><span data-lang="id">Hubungi Kami</span></h4>
+                <p><i class="fas fa-map-marker-alt"></i> Ruko, Jl. Komp. Metro Permata No.16 blok A1, RT.011/RW.014, Karang Mulya, Karang Tengah, Tangerang City, Banten 15157</p>
+                <div class="map-container">
+                    <iframe src="https://maps.google.com/maps?q=QPW8%2BR2%20Karang%20Mulya%2C%20Kota%20Tangerang%2C%20Banten&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+                <a href="https://wa.me/6281210055993" target="_blank"><p><i class="fab fa-whatsapp"></i> WA Bulk Order: 0812-1005-5993</p></a>
+                <a href="https://wa.me/6289636657249" target="_blank"><p><i class="fab fa-whatsapp"></i> WA CS / Event: 0896-3665-7249</p></a>
+            </div>
+
+            <div class="footer-col link-col">
+                <h4><span data-lang="en">Order Via</span><span data-lang="id">Order Melalui</span></h4>
+                <a href="https://gofood.link/a/SfwJmbq" target="_blank">GoFood</a>
+                <a href="https://r.grab.com/g/6-20260428_003541_772dc6d3ba2c406dbbb6eebd0e14dc48_MEXMPS-6-C7WTR4BGN7UHCX" target="_blank">GrabFood</a>
+                <a href="#" target="_blank">ShopeeFood</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Girigirii.id. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

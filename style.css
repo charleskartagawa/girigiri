@@ -1,0 +1,455 @@
+/* =========================================
+   VARIABLES & COLOR PALETTE
+========================================= */
+:root {
+    /* Sesuai Request User */
+    --bg-primary: #fadda2; /* Background utama */
+    --sushi-wrap: #d9791a; /* Bungkusan sushi / Accent Button */
+    --sushi-wrap-hover: #bd6714;
+    --sushi-cream: #fffdf0; /* Sushi putih krem (untuk card/surfaces) */
+    --text-main: #61371e; /* Warna teks utama bahasa jepang/cokelat */
+    --text-muted: #8c5b3e;
+    
+    /* Typography */
+    --font-heading: 'Yusei Magic', sans-serif;
+    --font-body: 'Nunito', sans-serif;
+
+    /* Spacing & Shadows */
+    --radius-md: 12px;
+    --radius-lg: 20px;
+    --shadow-soft: 0 8px 24px rgba(97, 55, 30, 0.08);
+    --shadow-hover: 0 16px 32px rgba(217, 121, 26, 0.15);
+    --transition-smooth: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-primary);
+    color: var(--text-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a { text-decoration: none; color: inherit; transition: var(--transition-smooth); }
+ul { list-style: none; }
+section { scroll-margin-top: 80px; padding: 80px 0; }
+.container { width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+/* =========================================
+   TYPOGRAPHY
+========================================= */
+h1, h2, h3, h4 { font-family: var(--font-heading); color: var(--text-main); font-weight: normal; }
+
+.section-header { text-align: center; margin-bottom: 40px; }
+.section-header .subtitle {
+    display: block; font-family: var(--font-body); color: var(--sushi-wrap);
+    font-weight: 700; font-size: 0.9rem; letter-spacing: 2px; margin-bottom: 8px;
+}
+.section-header h2 { font-size: 2.5rem; margin-bottom: 15px; }
+.section-header.left-align { text-align: left; }
+
+.line-accent {
+    width: 60px; height: 3px; background-color: var(--sushi-wrap);
+    margin: 0 auto; border-radius: 2px;
+}
+
+/* =========================================
+   BUTTONS
+========================================= */
+.btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    padding: 12px 24px; font-weight: 700; border-radius: 50px; cursor: pointer;
+    border: none; transition: var(--transition-smooth); font-size: 0.95rem; color: white;
+}
+
+.btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+
+/* Custom Brand Buttons */
+.btn-gofood { background-color: #EE2737; }
+.btn-grab { background-color: #00B14F; }
+.btn-shopee { background-color: #EE4D2D; }
+.btn-wa { background-color: var(--sushi-wrap); color: var(--sushi-cream); }
+.btn-wa:hover { background-color: var(--sushi-wrap-hover); }
+
+/* =========================================
+   NAVBAR
+========================================= */
+.navbar {
+    position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;
+    background: rgba(250, 221, 162, 0.9); /* Transparan berdasar bg-primary */
+    backdrop-filter: blur(10px); padding: 15px 0; transition: var(--transition-smooth);
+}
+.navbar .container { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-family: var(--font-heading); font-size: 1.8rem; color: var(--text-main); display: flex; align-items: center; gap: 8px; }
+.logo span { color: var(--sushi-wrap); }
+.brand-logo-img { height: 36px; width: 36px; object-fit: contain; border-radius: 50%; }
+
+.nav-links { display: flex; gap: 30px; align-items: center; }
+.nav-links li a { font-weight: 600; font-size: 0.95rem; }
+.nav-links li a:hover { color: var(--sushi-wrap); }
+
+.highlight-link {
+    background-color: var(--text-main); color: var(--sushi-cream) !important;
+    padding: 8px 18px; border-radius: 20px;
+}
+.highlight-link:hover { background-color: var(--sushi-wrap); color: white !important; }
+
+.hamburger { display: none; font-size: 1.5rem; cursor: pointer; color: var(--text-main); }
+
+/* =========================================
+   HERO SECTION
+========================================= */
+.hero {
+    min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center;
+    padding-top: 80px; position: relative;
+    /* Background foto sushi */
+    background: url('https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&q=80') center/cover no-repeat;
+}
+/* Overlay gelap agar text tetap terbaca */
+.hero::before {
+    content: ''; position: absolute; top:0; left:0; width:100%; height:100%;
+    background: linear-gradient(to bottom, rgba(18, 18, 18, 0.6), rgba(18, 18, 18, 0.9)); z-index: 0;
+}
+
+.hero-content { position: relative; z-index: 2; max-width: 800px; margin: 0 auto; }
+.hero h1 { font-size: 4rem; line-height: 1.2; margin-bottom: 20px; color: #fff; }
+.hero p { font-size: 1.2rem; margin-bottom: 40px; font-weight: 600; color: #fff; }
+.hero-buttons { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
+
+/* =========================================
+   ABOUT & FEATURES
+========================================= */
+.about-content { text-align: center; max-width: 800px; margin: 0 auto 50px; font-size: 1.1rem; }
+.about-content strong { color: var(--sushi-wrap); }
+
+.about-gif-logo {
+    display: block;
+    margin: 0 auto 20px auto;
+    height: 200px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 12px rgba(97, 55, 30, 0.25));
+}
+
+.features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; text-align: center; }
+.feature-item {
+    padding: 30px; background: var(--sushi-cream); border-radius: var(--radius-md);
+    box-shadow: var(--shadow-soft); transition: var(--transition-smooth); border: 2px solid transparent;
+}
+.feature-item:hover { transform: translateY(-10px); border-color: var(--sushi-wrap); }
+.feature-item i { font-size: 2.5rem; color: var(--sushi-wrap); margin-bottom: 20px; }
+.feature-item h3 { margin-bottom: 10px; font-size: 1.2rem; }
+.feature-item p { font-size: 0.95rem; color: var(--text-muted); }
+
+/* =========================================
+   LANGUAGE TOGGLE
+========================================= */
+body.lang-en [data-lang="id"] { display: none !important; }
+body.lang-id [data-lang="en"] { display: none !important; }
+
+.lang-btn { 
+    cursor: pointer; 
+    font-weight: bold; 
+    padding: 4px 8px; 
+    border-radius: 5px; 
+    transition: all 0.3s ease; 
+    opacity: 0.5; 
+    user-select: none; /* Mencegah teks ter-block/biru saat diklik */
+    color: var(--text-main);
+}
+.lang-btn:hover {
+    opacity: 0.8;
+}
+.lang-btn.active { 
+    opacity: 1; 
+    background: var(--sushi-wrap); 
+    color: white; 
+}
+
+/* =========================================
+   MENU SECTION
+========================================= */
+.menu-guides-row {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: stretch;
+    margin: 50px auto;
+    max-width: 900px;
+}
+.menu-guide-banner {
+    flex: 1;
+    max-width: 420px;
+    background: var(--sushi-cream);
+    padding: 20px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+    border: 2px solid rgba(97, 55, 30, 0.1);
+}
+.menu-guide-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--radius-md);
+    transition: var(--transition-smooth);
+}
+.menu-guide-banner:hover .menu-guide-img {
+    transform: scale(1.03);
+}
+
+/* Menu grid is completely independent from guide banners above */
+.menu-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; margin-bottom: 50px; }
+.drinks-grid { grid-template-columns: repeat(2, 1fr); max-width: 800px; margin-left: auto; margin-right: auto; }
+
+.category-title {
+    font-size: 2rem;
+    color: var(--text-main);
+    margin-bottom: 25px;
+    text-align: left;
+    border-bottom: 2px dashed var(--sushi-wrap);
+    padding-bottom: 10px;
+}
+
+.menu-card {
+    background: var(--sushi-cream); padding: 20px; border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft); transition: var(--transition-smooth);
+    border-left: 6px solid var(--sushi-wrap); /* Aksen warna bungkusan */
+    display: flex; flex-direction: column;
+}
+.menu-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-hover); }
+
+.menu-item-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+    margin-bottom: 15px;
+}
+
+.highlight-card { border: 2px solid var(--text-main); border-left: 6px solid var(--text-main); }
+
+.card-details { flex-grow: 1; display: flex; flex-direction: column; }
+.card-details h3 { font-size: 1.3rem; margin-bottom: 10px; line-height: 1.3; }
+.card-details p { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 15px; flex-grow: 1; }
+.price { font-weight: 700; color: var(--sushi-wrap); font-size: 1.1rem; margin-top: auto; }
+
+/* =========================================
+   CUSTOMIZATION (CONDIMENTS)
+========================================= */
+.custom-wrapper {
+    background: var(--sushi-cream); border-radius: var(--radius-lg); padding: 50px;
+    box-shadow: var(--shadow-soft); max-width: 900px; margin: 0 auto;
+}
+.custom-form h4 { margin-bottom: 15px; font-family: var(--font-body); font-size: 1.1rem; font-weight: 700;}
+.form-group { margin-bottom: 30px; }
+
+.checkbox-group, .radio-group { display: flex; flex-wrap: wrap; gap: 20px; }
+.custom-checkbox, .custom-radio {
+    display: flex; align-items: center; position: relative; padding-left: 35px;
+    cursor: pointer; font-size: 0.95rem; font-weight: 600;
+}
+.custom-checkbox input, .custom-radio input { position: absolute; opacity: 0; cursor: pointer; }
+
+.checkmark, .radio-mark {
+    position: absolute; top: 0; left: 0; height: 22px; width: 22px;
+    background-color: #eaddc6; border-radius: 6px; transition: var(--transition-smooth);
+}
+.radio-mark { border-radius: 50%; }
+
+.custom-checkbox input:checked ~ .checkmark,
+.custom-radio input:checked ~ .radio-mark { background-color: var(--sushi-wrap); }
+
+.checkmark:after, .radio-mark:after {
+    content: ""; position: absolute; display: none;
+}
+.custom-checkbox input:checked ~ .checkmark:after,
+.custom-radio input:checked ~ .radio-mark:after { display: block; }
+
+.custom-checkbox .checkmark:after {
+    left: 8px; top: 4px; width: 5px; height: 10px; border: solid var(--sushi-cream);
+    border-width: 0 2px 2px 0; transform: rotate(45deg);
+}
+.custom-radio .radio-mark:after {
+    top: 7px; left: 7px; width: 8px; height: 8px; border-radius: 50%; background: var(--sushi-cream);
+}
+
+/* =========================================
+   REELS SECTION
+========================================= */
+.reels-section {
+    background-color: var(--sushi-cream);
+    overflow: hidden;
+}
+
+.reels-container {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 20px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    /* Menyembunyikan scrollbar agar terlihat lebih clean */
+    scrollbar-width: none; /* Untuk Firefox */
+}
+
+.reels-container::-webkit-scrollbar {
+    display: none; /* Untuk Chrome, Safari, dan Opera */
+}
+
+.reel-iframe {
+    flex: 0 0 auto;
+    width: 320px;
+    height: 540px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+    scroll-snap-align: center;
+    background: #fff;
+}
+
+/* Reels UI Enhancements */
+.swipe-hint {
+    margin-top: 15px;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    display: inline-block;
+    background: rgba(217, 121, 26, 0.1);
+    padding: 8px 18px;
+    border-radius: 20px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 0.7; }
+    50% { opacity: 1; transform: scale(1.02); }
+    100% { opacity: 0.7; }
+}
+
+.reels-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.reel-scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--sushi-wrap);
+    color: white;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0 4px 15px rgba(217, 121, 26, 0.3);
+    transition: var(--transition-smooth);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reel-scroll-btn:hover {
+    background: var(--sushi-wrap-hover);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.reel-scroll-btn.left-btn { left: -15px; }
+.reel-scroll-btn.right-btn { right: -15px; }
+
+/* =========================================
+   BULK ORDER SECTION
+========================================= */
+.bulk-section { text-align: center; }
+.bulk-content {
+    background: var(--text-main); color: var(--sushi-cream); padding: 60px 40px;
+    border-radius: var(--radius-lg); max-width: 800px; margin: 0 auto;
+    box-shadow: var(--shadow-soft);
+}
+.bulk-badge {
+    display: inline-block; background-color: var(--sushi-wrap); color: white;
+    padding: 6px 16px; border-radius: 20px; font-weight: 700; font-size: 0.85rem;
+    margin-bottom: 20px; letter-spacing: 1px;
+}
+.bulk-section h2 { color: var(--sushi-cream); font-size: 2.5rem; margin-bottom: 20px; }
+.bulk-section p { font-size: 1.1rem; margin-bottom: 30px; color: rgba(255, 255, 255, 0.8); }
+
+.btn-wa-lg {
+    display: inline-flex; align-items: center; gap: 10px;
+    background-color: #25D366; color: white; padding: 18px 40px; font-size: 1.2rem;
+    border-radius: 50px; font-weight: bold; transition: var(--transition-smooth);
+}
+.btn-wa-lg:hover { background-color: #1EBE5D; transform: translateY(-5px); box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3); }
+
+/* =========================================
+   FOOTER
+========================================= */
+footer { background-color: var(--sushi-cream); border-top: 2px dashed var(--sushi-wrap); padding: 60px 0 20px 0; }
+.footer-content { display: grid; grid-template-columns: 1.5fr 2fr 1fr; gap: 40px; margin-bottom: 40px; align-items: start; }
+
+.brand-col h3 { font-size: 2rem; margin-bottom: 10px; }
+.brand-col span { color: var(--sushi-wrap); }
+.footer-logo-wrapper { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+.footer-logo-img { height: 52px; width: 52px; object-fit: contain; border-radius: 50%; }
+.social-links { display: flex; flex-direction: column; }
+.social-links a { display: inline-flex; align-items: center; gap: 8px; color: var(--sushi-wrap); font-weight: bold; margin-top: 10px;}
+
+.footer-col h4 { font-family: var(--font-body); font-size: 1.1rem; font-weight: bold; margin-bottom: 15px; color: var(--sushi-wrap); }
+.contact-col p { margin-bottom: 10px; display: flex; gap: 8px; font-weight: 600; font-size: 0.9rem; line-height: 1.5; word-break: break-word; }
+.contact-col i { color: var(--sushi-wrap); margin-top: 3px; flex-shrink: 0; }
+.map-container { border-radius: 10px; overflow: hidden; height: 140px; margin: 10px 0; }
+.map-container iframe { width: 100%; height: 100%; border: 0; display: block; }
+.link-col { display: flex; flex-direction: column; gap: 10px; font-weight: 600;}
+.link-col a:hover { color: var(--sushi-wrap); padding-left: 5px; }
+
+.footer-bottom { text-align: center; padding-top: 20px; border-top: 1px solid rgba(97, 55, 30, 0.1); font-size: 0.9rem; font-weight: 600; }
+
+/* ANIMATIONS */
+.fade-in-up { opacity: 0; transform: translateY(30px); transition: opacity 0.5s ease, transform 0.5s ease; }
+.fade-in-up.appear { opacity: 1; transform: translateY(0); }
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+
+/* =========================================
+   MEDIA QUERIES (Mobile Responsiveness)
+========================================= */
+@media (max-width: 900px) {
+    .menu-grid, .features-grid { grid-template-columns: repeat(2, 1fr); }
+    .footer-content { grid-template-columns: 1fr 1fr; }
+    .hero h1 { font-size: 3rem; }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: flex; position: fixed; top: 0; right: 0; transform: translateX(100%);
+        width: 70%; height: 100vh; background: var(--sushi-cream); flex-direction: column;
+        justify-content: center; padding: 40px; box-shadow: -10px 0 30px rgba(0,0,0,0.1);
+        transition: transform 0.4s ease; z-index: 1000; text-align: center;
+    }
+    .nav-links.active { transform: translateX(0); }
+    .hamburger { display: block; position: relative; z-index: 1001; }
+    
+    .menu-grid, .features-grid, .drinks-grid { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 2.5rem; }
+    .footer-content { grid-template-columns: 1fr; text-align: center; }
+    .contact-col p { justify-content: center; }
+    
+    /* Sembunyikan tombol scroll di HP karena sudah bisa di-swipe manual */
+    .reel-scroll-btn { display: none; }
+
+    /* Kurangi padding section dan gap antar bagian di mobile */
+    section { padding: 40px 0; }
+    .menu-guides-row { flex-direction: column; align-items: center; margin: 20px auto; gap: 15px; }
+    .menu-guide-banner { max-width: 100%; }
+    .menu-guide-top { margin-bottom: 0; }
+    .menu-guide-bottom { margin-top: 0; margin-bottom: 0; }
+    .custom-wrapper { padding: 30px 20px; }
+    .menu-grid { margin-bottom: 30px; }
+    .category-title { font-size: 1.5rem; }
+}
